@@ -39,4 +39,4 @@ for (let j = 0; j < arr.length - 1; j++) {
     };
 };
 
-console.log("The answer is " + answer);
+console.log(`The answer is ${answer}!`);
