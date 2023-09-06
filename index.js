@@ -1,14 +1,17 @@
 const readline = require('readline-sync');
 
-console.log("Welcome to the calculator!");
-console.log("==========================");
+function printWelcomeMessage () {
+    console.log("Welcome to the calculator!");
+    console.log("==========================");
+};
+
+printWelcomeMessage();
 
 console.log("Please enter the operator: ");
 const operator = readline.prompt(); 
 
 console.log(`How many numbers do you want to ${operator} together: `);
 const numbersrequired = Number(readline.prompt());
-
 
 
 let response;
@@ -37,9 +40,3 @@ for (let j = 0; j < arr.length - 1; j++) {
 };
 
 console.log("The answer is " + answer);
-
-
-
-
-
-
