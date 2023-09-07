@@ -46,7 +46,7 @@ return answer;
 
 function performOneCalculation () {
     const chosenOperator = getOperator();
-    let numbersArray = getNumbersArray(chosenOperator); // check if it works with let or const, unsure if function call assignment and function return will work on const
+    const numbersArray = getNumbersArray(chosenOperator);
     const finalAnswer = calculateAnswer(chosenOperator, numbersArray)
     console.log(`The answer is ${finalAnswer}!`);
 };
