@@ -11,8 +11,7 @@ function getInputWithPrompt (prompt) {
 };
 
 function getCalculationMode () {
-    return getInputWithPrompt(`
-    Which calculator mode do you want?
+    return getInputWithPrompt(`Which calculator mode do you want?
     Enter 1 for Arithmetic
     Enter 2 for Vowel Counting`
     )
