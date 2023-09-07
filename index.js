@@ -68,7 +68,8 @@ function calculateVowels (string) {
     U: 0,
   }
 
-  for (letter in string) {
+  // fix this it doesn't work, currently every property's value in the object does not change, stuck at 0
+  for (let letter in string) {
     if (letter === 'A') {
         vowels.A = vowels.A + 1
     } else if (letter === 'E') {
@@ -100,9 +101,10 @@ function performOneVowelCountingCalculation () {
     const calculatedVowelsObject = calculateVowels(givenString);
     
     // output the "the vowel counts are" text and the object as shown in the pdf
-    console.log(`The vowel counts are:
-    ${calculatedVowelsObject}
-    `);
+    console.log("The vowel counts are");
+    for (let property in calculatedVowelsObject) {
+        console.log(property + " : " + calculatedVowelsObject[property]);
+    }
 };
 
 const ARITHMETIC_MODE = '1';
