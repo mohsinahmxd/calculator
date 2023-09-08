@@ -57,8 +57,6 @@ return answer;
 }
 
 function calculateVowels (string) {
-  // use an object to hold the answer while doing the vowel counting calculation
-  // add support for counting the number of times each vowel appears in a given string
 
   const vowels = {
     A: 0,
@@ -68,19 +66,22 @@ function calculateVowels (string) {
     U: 0,
   }
 
-  // fix this it doesn't work, currently every property's value in the object does not change, stuck at 0
-  for (let letter in string) {
-    if (letter === 'A') {
-        vowels.A = vowels.A + 1
-    } else if (letter === 'E') {
-        vowels.E = vowels.E + 1
-    } else if (letter === 'I') {
-        vowels.I = vowels.I + 1
-    } else if (letter === 'O') {
-        vowels.O = vowels.O + 1
-    } else if (letter === 'U') {
-        vowels.U = vowels.U + 1
-    }
+  for (let letterIndex in string) {
+    console.log(string[letterIndex]);
+    
+    if (string[letterIndex] === 'A') {
+        vowels.A = vowels.A + 1; 
+    } else if (string[letterIndex] === 'E') {
+        vowels.E = vowels.E + 1;
+    } else if (string[letterIndex] === 'I') {
+        vowels.I = vowels.I + 1;
+    } else if (string[letterIndex] === 'O') {
+        vowels.O = vowels.O + 1;
+    } else if (string[letterIndex] === 'U') {
+        vowels.U = vowels.U + 1;
+    } else {
+
+    };
   }
 
   // return the object
@@ -100,7 +101,7 @@ function performOneVowelCountingCalculation () {
     // call the functuon and assign the object to a variable
     const calculatedVowelsObject = calculateVowels(givenString);
     
-    // output the "the vowel counts are" text and the object as shown in the pdf
+    // output the the vowel counts
     console.log("The vowel counts are");
     for (let property in calculatedVowelsObject) {
         console.log(property + " : " + calculatedVowelsObject[property]);
@@ -118,7 +119,6 @@ while (true) {
     } else if (calculationMode === VOWEL_COUNTING_MODE) {
     performOneVowelCountingCalculation();
     }
-    
 };
 
 
