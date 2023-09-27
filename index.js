@@ -98,7 +98,7 @@ function performOneArithmeticCalculation () {
 function performOneVowelCountingCalculation () {
     const givenString = getString();
 
-    // call the functuon and assign the object to a variable
+    // call the function and assign the object to a variable
     const calculatedVowelsObject = calculateVowels(givenString);
     
     // output the the vowel counts
